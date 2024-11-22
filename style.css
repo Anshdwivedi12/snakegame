@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/bg.jpg"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+#hiscoreBox{
+    position: absolute;
+    top: 40px;
+    right: 190px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+/* Existing styles remain the same */
+/* Add this to the existing CSS */
+.blur {
+    filter: blur(5px);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgb(241, 241, 154) ,rgb(125, 177, 125));
+    color: rgb(62, 2, 2);
+    border: 2px solid black;
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: block;
+    text-align: center;
+}
+
+.play-button:hover {
+    background-color: #e64a19;
+}
+
+
+
+#board{
+    background: linear-gradient(rgb(125, 167, 125), rgb(135, 186, 68),black);
+    width: 90vmin;
+    height: 92vmin;
+    border: 4px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: linear-gradient(rgb(244, 12, 12), rgb(35, 35, 31));
+    border: 2px solid rgb(34, 4, 34); 
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+     border-radius: 16px;
+} 
